@@ -14,17 +14,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeDepartmentComponent } from './components/home-department/home-department.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { FinalPortionComponent } from './components/final-portion/final-portion.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CareersComponent } from './pages/careers/careers.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { ShowCareersComponent } from './components/show-careers/show-careers.component';
 import { EventSolutionComponent } from './departments/event-solution/event-solution.component';
 import { EximComponent } from './departments/exim/exim.component';
 import { TechnologiesComponent } from './departments/technologies/technologies.component';
 import { TradingCorporationComponent } from './departments/trading-corporation/trading-corporation.component';
 import { EventServicesComponent } from './components/event-services/event-services.component';
-import { ContactUsInfoComponent } from './components/contact-us-info/contact-us-info.component';
 import { TechnologiesServicesComponent } from './components/technologies-services/technologies-services.component';
 import { TradServicesComponent } from './components/trad-services/trad-services.component';
 import { EximServicesComponent } from './components/exim-services/exim-services.component';
@@ -46,7 +43,6 @@ import { FooterMiddlePortionComponent } from './components/headers/footer-a/foot
 import { FooterFinalPortionComponent } from './components/headers/footer-a/footer-final-portion/footer-final-portion.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { SocialMediaIconComponent } from './components/headers/footer-a/social-media-icon/social-media-icon.component';
-import { WaveElementBComponent } from './components/wave-element-b/wave-element-b.component';
 import { HeaderTypeAboutUsComponent } from './components/headers/header-type-about-us/header-type-about-us.component';
 import { OurTeamBComponent } from './components/our-team-b/our-team-b.component';
 import { JobOpeningsComponent } from './components/job-openings/job-openings.component';
@@ -64,17 +60,14 @@ import { TradServicesContentComponent } from './components/trad-services/trad-se
     HomeComponent,
     HomeDepartmentComponent,
     ContactUsComponent,
-    FinalPortionComponent,
     AboutComponent,
     CareersComponent,
     ContactComponent,
-    ShowCareersComponent,
     EventSolutionComponent,
     EximComponent,
     TechnologiesComponent,
     TradingCorporationComponent,
     EventServicesComponent,
-    ContactUsInfoComponent,
     TechnologiesServicesComponent,
     TradServicesComponent,
     EximServicesComponent,
@@ -96,7 +89,6 @@ import { TradServicesContentComponent } from './components/trad-services/trad-se
     FooterFinalPortionComponent,
     CopyrightComponent,
     SocialMediaIconComponent,
-    WaveElementBComponent,
     HeaderTypeAboutUsComponent,
     OurTeamBComponent,
     JobOpeningsComponent,
