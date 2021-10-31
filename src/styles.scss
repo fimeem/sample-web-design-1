@@ -1,0 +1,433 @@
+$font-family-sans-serif:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base: 'Blinker', $font-family-sans-serif;
+
+
+$font-weight-lighter: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold : 600;
+$font-weight-bolder: 700;
+$font-weight-base: $font-weight-normal;
+
+// $display-font-sizes: (1: 9rem, 2: 5rem, 3: 4rem, 4: 3rem, 5: 2.5rem, 6: 2rem);
+// $display-font-weight: 200;
+
+$primary: #1a7991;
+$secondary: #451eac;
+$dark: #000000;
+$light: rgb(255, 255, 255);
+
+// $primary: #a02c8b;
+// $secondary: #451eac;
+// $dark: #000000;
+// $light: rgb(255, 255, 255);
+
+$font-family-base: 'Catamaran';
+$headings-font-family: 'Odor Mean Chey';
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Odor+Mean+Chey&display=swap');
+// @import "https://fonts.googleapis.com/css2?family=Blinker:wght@200;300;400;600;700&family=Play:wght@400;700&display=swap";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./scss/soft-design-system.scss";
+
+
+.bg-cover{
+  background-size: cover !important;
+}
+
+.bg-centered{
+  background-position: center !important;
+}
+
+.bg-blurred{
+   filter: blur(4px);
+   top: -10px;
+   left: -10px;
+   width: calc(100% + 20px);
+}
+
+.mt-ng-15{
+  margin-top: map-get($spacers, 5) * -1.5;
+}
+
+.send-to-back{
+  z-index: -9000;
+}
+
+.blur{
+  background-color: hsla(0,0%,100%,.8) !important;
+}
+
+
+
+
+.heading-font{
+  font-family: 'Odor Mean Chey', serif;
+}
+.base-font{
+  font-family: 'Catamaran', sans-serif;
+}
+
+
+
+$spacers: ('xxlg': 12rem, 'xlg': 11rem, 'lg': 10rem, 'md': 5rem, 'xmd': 6rem, 'xxmd': 7rem, 'sm': 3rem, 'xsm': 2rem, 'xxsm': 1rem);
+@each $level, $space in $spacers{
+  .spacev-#{$level} {
+    padding-top: $space;
+    padding-bottom: $space;
+  }
+  .spaceh-#{$level} {
+    padding-left: $space;
+    padding-right: $space;
+  }
+  .spacel-#{$level} {
+    padding-left: $space;
+  }
+  .spacer-#{$level} {
+    padding-right: $space;
+  }
+  .spacet-#{$level} {
+    padding-top: $space;
+  }
+  .spaceb-#{$level} {
+    padding-bottom: $space;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+section{
+  background-attachment: fixed;
+  background-position: top center;
+  .overlay{
+    background: linear-gradient(90deg, #000000af 20%, #000000af 80%);
+  }
+  &.hero{
+    background-image: url('/assets/images/background/Top side1770.png');
+    opacity: 1.0;
+  }
+}
+
+
+
+
+/**********************************************************************
+                 HOME
+***********************************************************************/
+.img-canvas-name{
+  @media (min-width: map-get($grid-breakpoints, 'lg')) {
+    margin-left: 7vw;
+  }
+}
+
+
+
+
+
+
+/**********************************************************************
+                 Department
+***********************************************************************/
+.services{
+  background-color: rgb(255, 255, 255);
+  .image{
+    position: relative;
+    .image_img{
+      display: block;
+      width: 100%;
+      height: 260px;
+    }
+    .image_overlay{
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 260px;
+      background: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.30s;
+      background-color: rgb(255, 255, 255);
+      &:hover{
+        opacity: 1;
+
+      }
+      // .image_logo{
+      //   width: 60px;
+      // }
+    }
+    .image_title_hearer{
+      color: rgba(100, 114, 117, 0.9);
+    }
+  }
+}
+.image_img_front{
+  width: 250px;
+  margin-bottom: 12px;
+  @media (min-width:  map-get($grid-breakpoints, 'lg')) {
+    width: 700px;
+    margin-bottom: 22px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   // NavBar
+//   .navbar{
+//     min-height: 0.5px;
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     font-size: 18px;
+//     // color: black;
+
+    // .img-logo{
+    //   width: 60px;
+    //   @media (min-width: map-get($grid-breakpoints, 'lg')){
+    //   width: 100px;
+    //   }
+    // }
+//     .service-dropdown{
+//       background:rgba(0, 0, 0, 0.9);
+//       color: #000000;
+//       .dropdown-item{
+//         &:hover{
+//           color: #000000;
+//         }
+//       }
+//     }
+//   }
+
+
+// .nav-main{
+//   z-index: 10px;
+//   transition: background-color 0.3s ease;
+//   position: inherit;
+//   display: block;
+//   width: 100%;
+//   @media (min-width:  map-get($grid-breakpoints, 'md')) {
+//     height: 80px;
+//     }
+//   @media (min-width:  map-get($grid-breakpoints, 'lg')) {
+//   height: 150px;
+//   }
+// }
+
+// .navbar {
+//   transition: background-color 0.3s ease;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Button
+// .btn{
+//   background: none;
+//   border: 2px solid;
+//   border-color: rgb(0, 0, 0);
+//   color: rgb(0, 0, 0);
+//   font: inherit;
+//   line-height: 1;
+//   margin: 0.5em;
+//   font-size: large;
+// }
+// .btn:hover,
+// .btn:focus{
+//   box-shadow: inset 6.5em 0 0 0 var(--hover);
+//   background-color: rgb(0, 0, 0);
+//   color: rgb(255, 255, 255);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Final Portion
+.icon{
+  color: rgba(40, 40, 40, 0.8);
+    &:hover{
+      color: rgba(100, 6, 88, 0.884);
+    }
+    .iframe{
+      border:0;
+      border-radius: 10px;
+      width: 280px;
+      height: 130px;
+      @media (min-width:  map-get($grid-breakpoints, 'md')) {
+        width: 500px;
+        height: 160px;
+      }
+      @media (min-width:  map-get($grid-breakpoints, 'lg')) {
+        width: 520px;
+        height: 200px;
+      }
+    }
+  }
+  .header6{
+    color: rgba(58, 44, 54, 0.7);
+    &:hover{
+      color: rgba(100, 6, 88, 0.884);
+    }
+  }
+  .header5{
+    color: rgba(40, 40, 40, 0.9);
+    &:hover{
+      color: rgba(100, 6, 88, 0.884);
+    }
+  }
+  .facebook-logo{
+    margin: 0 8px;
+    color: rgba(39, 39, 39, 0.8);
+    &:hover{
+      color: rgba(100, 6, 88, 0.884);
+    }
+  }
+  .twtitter-logo{
+    margin: 0 8px;
+    color: rgba(39, 39, 39, 0.8);
+    &:hover{
+      color: rgba(100, 6, 88, 0.884);
+    }
+  }
+  .linkedin-logo{
+    margin: 0 8px;
+    color: rgba(39, 39, 39, 0.8);
+    &:hover{
+      color: rgba(100, 6, 88, 0.884);
+    }
+  }
+  .canvas-title{
+    color: rgba(29, 29, 29, 0.9);
+    &:hover{
+      color: rgba(100, 6, 88, 0.884);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Portfolio
+// .container-portfolio{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-wrap: wrap;
+//   padding: 40px 0;
+//   .box{
+//     position: relative;
+//     width: 310px;
+//     height: 310px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin: 40px 30;
+//     transition: 0.5s;
+//     &::before{
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       left: 50px;
+//       width: 50%;
+//       height: 100%;
+//       border-radius: 8px;
+//       transform: skewX(15deg);
+//       transition: 0.5s;
+//       background: linear-gradient(315deg, rgba(121, 109, 153, 0.2), rgba(80, 46, 134, 0.2));
+//     }
+//     &::after{
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       left: 50px;
+//       width: 50%;
+//       height: 100%;
+//       border-radius: 8px;
+//       transform: skewX(15deg);
+//       transition: 0.5s;
+//       filter: blur(30px);
+//       transition: 0.5s;
+//       background: linear-gradient(315deg, rgba(121, 109, 153, 0.2), rgba(80, 46, 134, 0.2));
+//     }
+//     &:hover::before, :hover::after{
+//       transform: skewX(0deg);
+//       left: 20px;
+//       width: calc(100% - 50px);
+//       background: linear-gradient(315deg, rgba(28, 0, 51, 0.3), rgba(80, 46, 134, 0.3));
+//     }
+
+//     .content{
+//       position: relative;
+//       left: 0;
+//       padding: 20px 40px;
+//       background: #00000003;
+//       box-shadow: 0 5px 15px rgba(140, 133, 145, 0.3);
+//       border-radius: 8px;
+//       backdrop-filter: blur(10px);
+//       z-index: 1;
+//     }
+//   }
+// }

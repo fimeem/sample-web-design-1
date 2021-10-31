@@ -1,0 +1,25 @@
+<section class="introduction" style="margin-top: -600px">
+  <div class="overlay" style="padding-top: 700px">
+    <div class="container spaceb-md">
+      <div class="text-center text-lighter spaceb-md">
+        <p class="display1 spaceb-md">UPDATES</p>
+      </div>
+      <div class="container-row text-center">
+        <div class="row g-2">
+          <div class="blog .col-sm-4 .col-sm-3 spaceb-lg" *ngFor="let blogs of BlogList">
+            <div class="container-caption text-center">
+              <p class="container-caption-heading lead-paragraph-xl spaceb-sm">{{blogs.title}}</p>
+              <p class="container-caption-heading lead-paragraph spaceb-sm">{{blogs.created_on}}</p>
+              <p class="text-blog container-caption-subheading lead-paragraph"
+              #ellipsisRef ellipsis (ellipsis-change)="truncated($event)"
+              ellipsis [ngClass]="{ 'text-blog': !showMore }">
+                {{blogs.content}}</p>
+              <span class="more" *ngIf="!showMoreButton" (click)="showComplete()" href="{% url 'manage_xyz' xyz.id %}">Show more</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

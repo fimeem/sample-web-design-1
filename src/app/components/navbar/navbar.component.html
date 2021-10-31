@@ -1,0 +1,60 @@
+<div class="container position-sticky z-index-sticky top-0">
+  <div class="row">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg {{bgColor}} blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+        <div class="container-fluid">
+
+          <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon mt-2">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+            </span>
+          </button>
+
+          <a class="navbar-brand font-weight-bolder ms-sm-3" href="" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
+            <img src="assets/images/logo/Canvas_logo_cropped.png" height="40px" style="filter: invert();">
+          </a>
+
+          <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-200" id="navigation">
+            <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
+              <ng-container class="nav-item" *ngFor="let link of navigationList">
+                <ng-container *ngIf="link.children === undefined">
+                  <li class="nav-item">
+                    <a routerLink="{{link.path}}" class="nav-link">{{link.label}}</a>
+                  </li>
+              </ng-container>
+              <ng-container *ngIf="link.children">
+                <li class="nav-item dropdown dropdown-hover">
+                  <a routerLink="{{link.path}}" class="nav-link cursor-pointer" data-bs-toggle="dropdown">{{link.label}}
+                    <img src="assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-1"></a>
+                  <ul class="dropdown-menu dropdown-menu-animation dropdown-md border-radius-lg mt-0 mt-lg-3 p-3">
+                    <div class="d-none d-lg-block">
+                      <ul class="list-group">
+                        <li *ngFor="let child of link.children"  class="nav-item list-group-item border-0">
+                          <a routerLink="{{child.path}}" class="dropdown-item border-radius-md">
+                            {{child.label}}
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </ul>
+                </li>
+              </ng-container>
+              </ng-container>
+
+
+              <li class="nav-item ms-lg-auto">
+                <a class="nav-link nav-link-icon me-2" routerLink="/contact">
+                  <i class="fa fa-github me-1"></i>
+                  <p class="d-inline text-sm z-index-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mail Us">Contact Us</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>

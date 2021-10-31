@@ -1,0 +1,41 @@
+<section class="intro">
+    <div class="overlay-contact">
+      <div class="container">
+        <div class="card d-flex blur">
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form">
+          <div class="row d-flex p-5">
+
+            <div class="half ol-lg-3 col-sm-6 name_form" >
+              <div class="form-group">
+                <p class="mb-1">Your Name</p>
+                <input type="text" class="form-control " formControlName="name" placeholder="eg. Canvas">
+              </div>
+              <div class="form-group">
+                <p class="mb-1">Your Email-Address</p>
+                <input type="email" class="form-control " formControlName="email" placeholder="eg. info@canvasbdltd.com">
+              </div>
+              <div class="form-group">
+                <p class="mb-1">Your Number</p>
+                <input type="text" class="form-control " formControlName="number" placeholder="eg. (+88)01746674168">
+              </div>
+            </div>
+
+            <div class="half ol-lg-3 col-sm-6 mb-3">
+              <p class="mb-1">How can we help you?</p>
+              <div class="form-group">
+                <textarea rows="6" class="form-control " formControlName="projectDescription" placeholder="Massages or Queries"></textarea>
+              </div>
+              <div class="submit-btn">
+                <button class="btn btn-lg mt-3 spaceh-sm bg-gradient-dark" >Submit</button>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
